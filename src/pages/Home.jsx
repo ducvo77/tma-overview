@@ -58,22 +58,24 @@ function Home() {
                 Submit
               </Button>
             </div>
-            <ul className="border min-w-[16rem] flex flex-col mt-10">
-              {workLists.map((work, index) => (
-                <li
-                  key={`work-${index}`}
-                  className="cursor-pointer hover:bg-slate-200 p-2 relative flex items-center"
-                >
-                  <span>{work.title}</span>
-                  <span
-                    className="absolute right-2 p-2"
-                    onClick={() => handleDelete(index)}
+            {workLists[0] && (
+              <ul className="border min-w-[16rem] flex flex-col mt-10">
+                {workLists.map((work, index) => (
+                  <li
+                    key={`work-${index}`}
+                    className="cursor-pointer hover:bg-slate-200 p-2 relative flex items-center border-b"
                   >
-                    X
-                  </span>
-                </li>
-              ))}
-            </ul>
+                    <span>{work.title}</span>
+                    <span
+                      className="absolute right-2 p-2"
+                      onClick={() => handleDelete(index)}
+                    >
+                      X
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </Section>
       </Container>
