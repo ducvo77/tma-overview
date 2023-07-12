@@ -1,14 +1,16 @@
+import "./index.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import store, { persistor } from "./redux/store";
+import store from "./stores/store";
 import { PersistGate } from "redux-persist/integration/react";
 import PostNumberProvider from "./components/PostNumberProvider";
+import persistStore from "redux-persist/es/persistStore";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+let persistor = persistStore(store);
 
 root.render(
   <React.StrictMode>

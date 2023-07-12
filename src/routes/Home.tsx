@@ -23,7 +23,7 @@ function Home() {
   }, [workLists, valueTitle, valueDescription]);
 
   const handleDelete = useCallback(
-    (index) => {
+    (index: any) => {
       const array = workLists.filter((work, index2) => index !== index2);
       setWorkLists(array);
     },

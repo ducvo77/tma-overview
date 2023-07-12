@@ -1,6 +1,6 @@
 import axios from "../axios";
 
-const getProduct = () =>
+const getAllProducts = () =>
   new Promise(async (resolve, reject) => {
     try {
       const response = await axios({
@@ -13,8 +13,17 @@ const getProduct = () =>
     }
   });
 
-// const getProduct = async () => {
-//   const res = await axios.get("/products");
-//   return res;
-// };
-export default getProduct;
+const getOneProduct = (id) =>
+  new Promise(async (resolve, reject) => {
+    try {
+      const response = await axios({
+        method: "get",
+        url: `/products/${id}`,
+      });
+      resolve(response);
+    } catch (error) {
+      reject(error);
+    }
+  });
+
+export { getAllProducts, getOneProduct };

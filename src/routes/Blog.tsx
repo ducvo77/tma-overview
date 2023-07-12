@@ -6,8 +6,13 @@ import { PostContext } from "../components/PostNumberProvider";
 import Section from "../components/Section";
 import { Button } from "@mui/material";
 
+interface postDataType {
+  handleClick: () => void;
+}
+
 function Blog() {
-  const postData = useContext(PostContext);
+  const postData: postDataType = useContext(PostContext);
+
   return (
     <>
       <Header />
