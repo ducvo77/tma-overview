@@ -3,6 +3,7 @@ import Container from "../components/Container";
 import Header from "../components/Header";
 import Section from "../components/Section";
 import { useCallback, useState } from "react";
+import SlideShow from "../components/SlideShow";
 
 function Home() {
   const [workLists, setWorkLists] = useState([]);
@@ -34,6 +35,7 @@ function Home() {
     <>
       <Header />
       <Container>
+        <SlideShow />
         <Section>
           <div className="flex items-center flex-col gap-2">
             <h2 className="text-2xl font-bold my-2">TODO APP!!</h2>

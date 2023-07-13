@@ -3,7 +3,7 @@ import Container from "../components/Container";
 import Header from "../components/Header";
 import Section from "../components/Section";
 import { useDispatch, useSelector } from "react-redux";
-import { decrement, incrementByAmount } from "../stores/counterSlice";
+import { decrement, incrementByAmount } from "../features/counter/counterSlice";
 
 function About() {
   const { value }: any = useSelector(

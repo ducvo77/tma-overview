@@ -6,7 +6,7 @@ import {
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-import counterReducer from "./counterSlice";
+import counterReducer from "../features/counter/counterSlice";
 
 const persistConfig = {
   key: "root",
